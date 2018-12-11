@@ -1,0 +1,95 @@
+<html lang="es">
+<head>
+  <title>CalcuBinario</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Convierte de un numero fraccionario a un numero binario y de un numero binario a un numero fraccionario de formas sencilla">
+  <meta name="keywords" content="calculadora binaria, binario, conversor binario, de binario a fraccionario, de fraccionario a binario">
+  <meta property="title" content="▷ Calculadora binaria | Convierte de binario a fraccionario y viceversa" />
+  <meta name="author" content="Juan Carlos Hoyos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <div id="Menu">
+        <center><img src="../imagenes/logo.png" alt="logotipo" title="logotipo" id ="logotipo"></center>
+      <div id= "toogle-btn">
+       <ul>
+         <li><a href="../index.html">Decimal-Binario</a></li>
+         <li><a href="../Binario-Fraccionario/index.html" id="Onlink">Fraccionario-Binario</a></li>
+         <li><a href="../Texto-Binario/index.html">Texto-Binario</a></li>
+         <li><a href="../Hamming/index.html">Paridad Hamming</a></li>
+         <li><a href="../OperacionesBasicas/index.html">Operaciones binarias</a></li>
+       </ul>
+     </div>
+   </div>
+ <div class="container">
+   <div class="ingreso_datos">
+        <h1>Convertir número decimal fraccionario a binario</h1>
+    <input type="text" id="numero_fraccionario" placeholder="Número fraccionario">
+    <input type="text" id="numero_binarioFraccionario" placeholder="Binario fraccionario" readonly>
+    <button id="btn_1"  onclick="fraccion()">Convertir</button>
+
+        <h2>Convertir número fraccionario binario a decimal</h2>
+    <input type="text" id="binario_fraccionario" placeholder="Número binario">
+    <input type="text" id="decimal_fraccionario" placeholder="Número decimal" readonly>
+    <button id="btn_2"  onclick="fraccion_binario()">Convertir</button>
+    <aside class="anuncios">
+
+    </aside>
+
+  </div>
+  <section class="main">
+    <section class ="articles">
+        <article>
+          <h3> Como convertir un fraccionario a binario</h3>
+          <p>Para aprender a como transformar un número <strong>fraccionario</strong> a un número <strong>binario</strong> seguiremos los pasos
+             que mostramos en el siguiente ejemplo.<br/>
+             para convertir el número <strong>fraccionario</strong> 42.375 a <strong>binario</strong>, comenzaremos
+             pasando la parte entera 42 a binario.<br/>
+             1.dividiremos el numero 42 entre 2.<br/>
+             2.Dividiremos el cociente obtenido por 2 y repetiremos el procedimiento hasta que el cociente sea 1.<br/>
+             3.El numero binario se formamorá tomando del ultimo cociente al primero, seguido veremos si el numero es par o impar, cuando el
+             numero sea par se  agregara un 0  y cuando el numero sea impar se agregara un 1.<br/><br/>
+           </P>
+           <p>Cuando ya tengamos la parte entera en binario proseguiremos a tomar solo la parte fraccionaria 0.375. Ya teniendo
+             la parte fraccionaria se empezará multiplicando por 2, y se seguira multiplicando cada
+             parte fraccional resultante del producto por 2, hasta que el producto fraccionario sea cero o hasta que se llegue al número
+             deseado de posiciones decimales.<br/>
+             Los dígitos de 0 y 1 acarreados generados por las multiplicaciones darán lugar al número binario.</p>
+             <img src="../imagenes/fraccionario_binario.gif" title="Fraccionario-Binario" alt="Fraccionario-binario" style="max-width:40%;"
+             style="min-width:40%;">
+         </article>
+         <article>
+           <h4> Como convertir un binario a fraccionario</h4>
+            <p>Para aprender a como transformar un número <strong>binario</strong> a un número <strong>fraccionario</strong>
+              seguiremos los pasos que mostraremos en el siguiente ejemplo.<br/>
+              Tomando del ejemplo anterior su resultado en binario 101010.011 comenzaremos tomando la primera parte y la pasaremos a decimal.</p>
+              <p>1.Comenzaremos tomando los digitos de derecha a izquierda <br/>
+                 2.Se tendrá en en cuenta solo las posiciones donde se encuentre el <b>digito 1</b>.<br/>
+                 3.El número decimal se sacará de la <b>suma total</b> de elevar el número 2 a la posición en que se encuentra los digitos 1.<br/>
+                 4.Tener en cuenta que la <b>posición comenzará desde 0 </b>por lo tanto si en la primera posición se encuentra un 1 se elevera 2<sup>0</sup>.<br/>
+                 5.El resultado sería 0+2<sup>5</sup>+0+2<sup>3</sup>+0+2<sup>1</sup>+0 = 42.
+               </p>
+               <center><img src="../imagenes/binario_decimal.png" title="Binario_Fraccionario" alt="Binario-Decimal" style="max-width:30%;"
+               style="min-width:30%;"></center><br/>
+               <p>Ahora pasaremos la parte fraccionaria binaria a decimal fraccionario.<br/>
+               El procedimiento será similar al anterior, pero con algunos cambios</p>
+               <p>1.Tomaremos solo la parte despues del punto 011 y lo recorremos está vez de izquierda a derecha.<br/>
+                  2.Del mismo metodo anterior utilizaremos la elevación, pero está vez se comenzará las posiciones desde 1.<br/>
+                  3.Las posiciones serán negativas (-1,-2,-3,...-n).<br/>
+                  4.Solo tendremos en cuenta nuevamente las posiciones donde se encuentre el digito 1.<br/>
+                  5.Como se encuentra con una exponenciación negativa podemos tomarlo como si de una division se tratase.<br/>
+                  6.El resultado será  0+1/2<sup>2</sup>+1/2<sup>3</sup> = 0.375.
+              </p>
+              <center><img src="../imagenes/bin_fraccionario.png" title="Binario_Fraccionario" alt="Binario-Decimal" style="max-width:25%;"
+                 style="min-width:30%"></center>
+
+          </article>
+    </section>
+    <aside></aside>
+   <script type="text/javascript" src="main.js"> </script>
+    <script type="text/javascript" src="../main.js"> </script>
+</div>
+</body>
+</html>

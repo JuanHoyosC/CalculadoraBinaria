@@ -1,0 +1,95 @@
+.container{
+  width: 85%;
+  height:95%;
+  padding-left: 22%;
+  padding-top: 3%;
+}
+
+
+.main{
+  float: left;
+  width: 85%;
+  text-align: justify;
+}
+
+
+#textarea_text, #textarea_binario,#textarea_binario_texto,#textarea_texto_binario{
+  display: inline-block;
+  min-width: 40%;
+  max-width: 40%;
+  height: 10vw;
+  font-size: 1vw;
+  margin-top: 1%;
+  padding: 0.5% 0.5%;
+  border: 0.09em solid #2CC8C6;
+
+}
+
+#textarea_binario,#textarea_texto_binario{
+  margin-left: 5%;
+  outline:none;
+}
+
+p{
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-align: justify;
+  margin-top: 2%;
+}
+
+label{
+  display:inline-block;
+  width: 45%;
+  color: #2F8774;
+  font-size: 1vw;
+  font-family: sans-serif;
+}
+
+h1, h2{
+  color:#2F8774;
+  margin-bottom: 2%;
+  font-size: 1.5vw;
+}
+
+#btn_1{
+  margin-bottom: 3%;
+}
+#btn_1, #btn_2{
+  display: block;
+  color: #FFF;
+  background: #35CBAB;
+  font-size:1vw;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0.1vw 0.1vw;
+  height: 2.5em;
+  width: 10%;
+  border-radius: 1em;
+  margin-top: 1%;
+  outline:none;
+  border: none;
+}
+
+
+#btn_1:hover{
+  background: #1CB896 ;
+  cursor: pointer;
+}
+
+#btn_2:hover{
+  background: #1CB896 ;
+  cursor: pointer;
+}
+#anuncios{
+  height: 10vw;
+  width: 85%;
+  border: 0.009em solid #35CBAB;
+  margin-top: 2%;
+}
+
+aside{
+  height: 10vw;
+  width: 85%;
+  margin-top: 3%;
+  border: 0.009em solid #000;
+}

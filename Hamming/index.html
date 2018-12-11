@@ -1,0 +1,97 @@
+<html lang="es">
+<head>
+  <title>CalcuBinario</title>
+  <meta charset="utf-8">
+  <meta name="description" content= "Codifica de una palabra de datos a palabra de codigo hamming de formas sencilla">
+  <meta name="keywords" content="codificar hamming, hamming, codigo hamming, bit de paridad, correcion de errores, corregir codigo">
+  <meta property="title" content="▷ Codigo hamming | Codificacion de código Hamming" />
+  <meta name="author" content="Juan Carlos Hoyos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+    <div id="Menu">
+      <center><img src="../imagenes/logo.png" alt="logotipo" title="logotipo" id="logotipo"></center>
+      <div id= "toogle-btn">
+       <ul>
+         <li><a href="../index.html">Decimal-Binario</a></li>
+         <li><a href="../Binario-Fraccionario/index.html">Fraccionario-Binario</a></li>
+         <li><a href="../Texto-Binario/index.html">Texto-Binario</a></li>
+         <li><a href="../Hamming/index.html" id="Onlink">Paridad Hamming</a></li>
+         <li><a href="../OperacionesBasicas/index.html">Operaciones binarias</a></li>
+       </ul>
+     </div>
+   </div>
+
+ <div class="container">
+    <div id="agregaHamming">
+      <h1>Codificar con codigo Hamming</h1>
+      <input type="text" id="palabra_dato" placeholder="Palabra de datos">
+      <input type="text" id="palabra_codigo" placeholder="Palabra de codigo" readonly>
+      <button id="btn_1"  onclick="codigoHamming()">Codificar</button>
+    </div>
+
+    <div id = "corregirHamming">
+     <h2>Detección de errores Hamming</h2>
+     <input type="text" id="binario_corregir" placeholder="Código Hamming">
+     <input type="text" id="posicion" placeholder="posición de error" readonly>
+     <button id="btn_2"  onclick="principal()">Posición</button>
+    </div>
+   <aside></aside>
+   <section class="main">
+     <section class ="articles">
+         <article>
+
+           <h3> Código Hamming.</h3>
+            <p>En informática, el código de Hamming es un código detector y corrector de errores que lleva el nombre de su inventor, Richard Hamming.
+               En los datos codificados en Hamming se pueden detectar errores en un bit y corregirlos, sin embargo no se distingue entre errores de dos bits
+               y de un bit (para lo que se usa Hamming extendido).<br/> Esto representa una mejora respecto a los códigos con bit de paridad, que pueden detectar
+               errores en sólo un bit, pero no pueden corregirlo.</p>
+             <p>Ejemplo. <br/>
+               1.Consideremos la palabra de datos 0110101, agregaremos los bit de codigo en las posiciones 2<sup>n</sup>.<br/>
+               2.Procederemos a calcular los bit de codigo por sus posiciones.<br/><br/>
+
+                P<sub>1</sub> = D1+D2+D4+D5+D7 = 0+1+0+1+1 = 1 <br/>
+                P<sub>2</sub> = D1+D3+D4+D6+7 = 0+1+0+0+1 = 0<br/>
+                P<sub>2</sub> = D2+D3+D4 = 1+1+0 = 0<br/>
+                P<sub>1</sub> = D5+D6+D7 = 1+0+1 = 0 <br/><br/>
+
+               3. Tomaremos los 4 bits resultantes = 1000 <br/>
+               4.Tener en cuenta que para saber el bit de codigo se mirará la cantidad de 1 que haya en la suma si es par el resultado será 0 y si no
+               se agregará un 1.<br/>
+               5.Agregaremos estos bit resultantes en las posiciones 2<sup>0</sup>,2<sup>1</sup>,2<sup>2</sup>,2<sup>3</sup>.<br/>
+               6.El resultado sería 10001100101.
+             </p>
+
+
+            <img src="../imagenes/hamming.png" title="Hamming" alt="Hamming" style="max-width:50%;"
+               style="min-width:30%">
+          </article>
+          <article>
+            <h4 style="margin-top:3%;"> Detección de errores</h4>
+             <p>Consideremos ahora que el bit de la derecha, por error, cambia de 1 a 0. La nueva palabra de datos será ahora 10001100100.<br>
+             Para saber en donde se encuentra el error seguiremos los siguientes pasos.</p>
+             <p>1.Teniendo el código de Hamming completo proseguiremos a calcular nuevamente su XOR o verificaremos si es par o impar.<br/>
+                2.Esta vez se tendra en cuenta el bit P1, p2,..., Pn. Para saber el resultado. <br/>
+                3.Colocar el D7 = 0 ya que esté es el bit que viene con errores<br/>
+                4.Recuerda que los P1, p2,..., Pn. Se encuentra en las posiciones 2<sup>n</sup>.<br/><br/>
+
+                P1+D1+D2+D4+D5+D7 = 1+0+1+0+1+0 = 1 <br/>
+                P2+D1+D3+D4+D6+7 = 0+0+1+0+0+0 = 1<br/>
+                P3+D2+D3+D4 = 0+1+1+0 = 0<br/>
+                P4+D5+D6+D7 = 0+1+0+0 = 1 <br/><br/>
+
+                5.Tomado los bit de abajo hacia arriba tendriamos 1101 que en decimal equivale 11.
+                6.En la posición 11 se encuentra el bit errado, por lo tanto procedemos a corregirlo teniendo como resultado 10001100101.
+              </p>
+              <img src="../imagenes/correcion.png" title="Hamming" alt="Hamming" style="max-width:70%;"
+                 style="min-width:30%"><br/><br/><br/>
+
+     </section>
+     <aside></aside>
+ </div>
+
+ <script type="text/javascript" src="main.js"> </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+*{
+margin: 0px;
+padding:0px;
+font-family: sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+    display: none;
+}
+
+br {
+  line-height: 100%;
+  max-height: 100%;
+}
+
+#logotipo{
+  display: block;
+  margin-top: 10%;
+  margin-bottom: 50%;
+  max-width: 43%;
+  min-width: 43%;
+}
+
+
+#Menu{
+position: fixed;
+float: left;
+width: 15%;
+height: 110%;
+background: #3FADAD;
+}
+
+#toogle-btn{
+  width: 90%;
+}
+
+#Menu ul li{
+  list-style: none;
+}
+
+#Menu ul li a{
+display: block;
+background-color: inherit;
+font-family: serif;
+font-size: 1vw;
+color: #FFF;
+width: 100%;
+padding: 5% 5%;
+border: none;
+border-bottom: 0.05em solid rgba(100, 100, 100, 0.3);
+outline: none;
+text-decoration: none;
+}
+
+#Menu ul li a#Onlink{
+background: #17D2D2;
+}
+
+
+#Menu ul a:hover{
+  background: #17D2D2;
+  cursor: pointer;
+}

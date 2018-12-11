@@ -1,0 +1,92 @@
+.container{
+  width: 85%;
+  height:100%;
+  margin-left: 23%;
+  padding-top: 5%;
+}
+
+
+
+.main{
+  float: left;
+  width: 85%;
+  text-align: justify;
+}
+
+p{
+  font-family: sans-serif;
+  font-size: 1vw;
+  text-align: justify;
+  margin-bottom: 2%;
+}
+
+h2,h3,h4,h5{
+  color:#2F8774;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 1.5vw;
+}
+
+ #numero1, #numero2{
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 1vw;
+  width: 25%;
+  height: 2.5em;
+  border-bottom: 0.09em solid rgba(53, 203, 171 , 1);
+  margin: 3% 3%;
+  padding: 0%;
+}
+
+select{
+  outline: none;
+  font-size: 1vw;
+  width: 10vw;
+  height: 2.5vw;
+  border: 0.009em solid #35CBAB;
+}
+
+label{
+  display: block;
+  font-size: 1vw;
+  color: #2F8774;
+  margin-left: 3%;
+  max-width: 80%;
+}
+
+h1{
+  color: #2F8774;
+  margin-left: 20%;
+  font-size:2vw;
+}
+
+
+#btn{
+  outline:none;
+  border: none;
+  color: #FFF;
+  background: #35CBAB;
+  font-size:1vw;
+  font-family: sans-serif;
+  text-align: center;
+  height: 2.5em;
+  width: 10%;
+  border-radius: 1em;
+  padding: 0.1vw 0.1vw%;
+}
+
+#btn:hover{
+  background: #1CB896 ;
+  cursor: pointer;
+}
+
+
+
+aside{
+  margin-top: 3%;
+  margin-bottom:3%;
+  width: 86%;
+  height: 10vw;
+  border: 0.009em solid #35CBAB;
+}
